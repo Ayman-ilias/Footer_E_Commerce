@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickCart Footer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hover-underline-animation {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .truck-animation {
+            position: absolute;
+            bottom: 0;
+            left: -100px;
+            width: 100px;
+            animation: drive 15s linear infinite;
+            transform: scaleX(-1); /* Mirror the image horizontally */
+        }
+
+        @keyframes drive {
+            0% { left: -100px; }
+            100% { left: 100%; }
+        }
+
+        .footer-container {
+            background: #000;
+            padding: 4rem 1rem;
+        }
+
+        .footer-heading {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #f9fafb;
+        }
+
+        .footer-link {
+            color: #d1d5db;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #f9fafb;
+        }
+
+        .footer-input {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem 0 0 0.375rem;
+            border: none;
+            transition: border-color 0.3s;
+        }
+
+        .footer-input:focus {
+            border-color: #dc2626;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.5);
+        }
+
+        .footer-button {
+            padding: 0.5rem 1rem;
+            border-radius: 0 0.375rem 0.375rem 0;
+            background: #dc2626;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .footer-button:hover {
+            background: #b91c1c;
+        }
+
+        .payment-img {
+            height: 3rem;
+            transition: transform 0.3s;
+        }
+
+        .payment-img:hover {
+            transform: scale(1.1);
+        }
+
+        .main-color {
+            color: #dc2626;
+        }
+
+        .blue-text {
+            color: #60AEDD !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <footer class="footer-container relative fade-in overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between text-gray-300">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <!-- <img src="./clickcart_logo.png" alt="ClickCart Logo" class="h-12 mr-2"> -->
+                        <span class="text-2xl font-bold main-color">ClickCart</span>
+                    </div>
+                    <p class="mb-4">Get 10% off your first order</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Enter your email" class="footer-input w-3/5 md:w-2/3 text-black">
+                            <button class="footer-button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="w-full md:w-2/5 flex justify-around mb-6 md:mb-0">
+                    <div>
+                        <h2 class="mb-2 footer-heading">Support</h2>
+                        <address class="not-italic">
+                            XYZ,Bangladesh<br>
+                            <a href="contact.clickcart.bd@gmail.com" class="mb-2 mt-2 footer-link hover-underline-animation">contact.clickcart.bd@gmail.com</a><br>
+                            <a href="tel:" class="footer-link hover-underline-animation mb-2">+8801x-xxxxxx</a>
+                        </address>
+                    </div>
+                    <div>
+                        <h2 class="footer-heading">Account</h2>
+                        <ul>
+                            <li class="mb-2"><a href="#" class="footer-link hover-underline-animation">My Account</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link hover-underline-animation">Login / Register</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link hover-underline-animation">Cart</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link hover-underline-animation">Wishlist</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link hover-underline-animation">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="footer-heading">Quick Links</h2>
+                        <ul>
+                            <li class="mb-2"><a href="#" class="footer-link hover-underline-animation">Privacy Policy</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link hover-underline-animation">Terms of Use</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link hover-underline-animation">FAQ</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link hover-underline-animation">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/5">
+                    <h2 class="footer-heading">Payment Methods</h2>
+                    <div class="flex space-x-4">
+                        <img src="./image_2024-06-07_103723098-removebg-preview.png" alt="Stripe" class="payment-img">
+                        <img src="./image_2024-06-07_104151620-removebg-preview.png" style="width: 100px;" alt="SSLCommerz" class="payment-img">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                <span id="copyright-text">&copy; Copyright ClickCart 2024-25. All rights reserved.</span>
+            </div>
+        </div>
+        <img src="./output-onlinegiftools.gif" alt="Running Truck" class="truck-animation" id="truck">
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const truck = document.getElementById('truck');
+            const copyrightText = document.getElementById('copyright-text');
+
+            truck.addEventListener('animationiteration', function() {
+                truck.style.left = '-100px';
+            });
+
+            setInterval(() => {
+                const truckRect = truck.getBoundingClientRect();
+                const textRect = copyrightText.getBoundingClientRect();
+
+                if (
+                    truckRect.right >= textRect.left &&
+                    truckRect.left <= textRect.right &&
+                    truckRect.bottom >= textRect.top &&
+                    truckRect.top <= textRect.bottom
+                ) {
+                    copyrightText.classList.add('blue-text');
+                } else {
+                    copyrightText.classList.remove('blue-text');
+                }
+            }, 100); 
+        });
+    </script>
+</body>
+</html>
